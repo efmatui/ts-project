@@ -3,8 +3,6 @@ export default (schema: any) => {
   return (req: express.Request, res: express.Response, next: NextFunction) => {
     const { error } = schema.validate(req.params)
     const valid = error == null
-    console.log('test joi')
-    console.log(req)
     if (valid) {
       next()
     } else {

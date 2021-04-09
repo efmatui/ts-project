@@ -4,7 +4,8 @@ import UserController from './controllers/UserController';
 import * as schema from './schemas/ListUserSchema';
 import checkJoi from './middlewares/check-joi'
 
-app.get('/', checkJoi(schema.schemaIndex), UserController.listUser)
+app.get('/user', UserController.listUser)
+app.get('/user/:id', UserController.getById)
 
 const port = process.env.port || 3000;
 

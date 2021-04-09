@@ -4,8 +4,6 @@ exports.default = (function (schema) {
     return function (req, res, next) {
         var error = schema.validate(req.params).error;
         var valid = error == null;
-        console.log('test joi');
-        console.log(req);
         if (valid) {
             next();
         }

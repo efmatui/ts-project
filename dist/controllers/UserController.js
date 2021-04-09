@@ -51,6 +51,18 @@ var UserController = /** @class */ (function () {
             });
         });
     };
+    UserController.prototype.getById = function (req, res) {
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                try {
+                    res.status(200).send({ 'id': '2qase13!@)$@#aw', 'name': 'EF', 'email': 'moe.cute@live.com' });
+                }
+                catch (error) {
+                }
+                return [2 /*return*/];
+            });
+        });
+    };
     return UserController;
 }());
 exports.default = new UserController();
